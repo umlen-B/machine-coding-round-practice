@@ -16,7 +16,6 @@ const StarRating = () => {
         
         <div className="flex">
                 {arr.map((_)=> {
-                    // return (<span key={_} className={_<= Math.floor(rating) ? "rating" : _ > Math.ceil(rating)? '': 'F'+(rating%1*100).toString()}>&#9734;</span>)
                     return (
                     <>
                         <div className="ratings">
@@ -27,8 +26,6 @@ const StarRating = () => {
                     )
                 })}
         </div>
-        {/* <label htmlFor="starRating">
-        </label> */}
         <div className="flex w-75">
             <input name="starRating" id="starRating" style={{width:'50vw'}} type="range" value={rating} min="0" max={arr.length} step="0.05" onChange={updateRating} />
             <span className="text-5xl pl-10 w-32">{rating}</span>
