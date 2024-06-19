@@ -14,8 +14,6 @@ export interface FileItem {
   isVisible?: boolean;
 }
 
-
-
 interface FileProviderProps {
   children: ReactNode;
 }

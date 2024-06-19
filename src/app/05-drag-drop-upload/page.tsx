@@ -60,8 +60,9 @@ const App: React.FC = () => {
         className="drop-zone"
         onDrop={handleDrop}
         onDragOver={handleDragOver}
+        onClick={() => document.getElementById('file-input')?.click()}
       >
-        <p onClick={() => document.getElementById('file-input')?.click()}>Drag & Drop your files here or click to upload</p>
+        <p>Drag & Drop your files here or click to upload</p>
         <input type="file" id="file-input" multiple onChange={handleFileSelect} />
       </div>
       <div id="file-list">

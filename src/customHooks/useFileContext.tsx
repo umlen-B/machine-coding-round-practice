@@ -5,7 +5,7 @@ import { FileItem } from "../app/07-file-explorer/page";
 interface FileContextType {
     explorer: FileItem;
     setExplorer: React.Dispatch<React.SetStateAction<FileItem>>;
-  }
+}
 
 // Create the context with an initial value of undefined
 export const FileContext = createContext<FileContextType | undefined>(undefined);
@@ -17,4 +17,4 @@ export const useFileContext = () => {
       throw new Error('useFileContext must be used within a FileProvider');
     }
     return context;
-  };
+};
