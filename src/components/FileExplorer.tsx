@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useFileContext } from '../app/07-file-explorer/page';
+import { useFileContext } from '../customHooks/useFileContext';
 
 interface FileItem {
   id: string;
