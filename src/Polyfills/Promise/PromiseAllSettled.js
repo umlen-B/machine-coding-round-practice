@@ -12,4 +12,26 @@ const myAllSettled = (promises) => {
     return Promise.all(mappedPromises);
   }
 
-Promise.prototype.myAllSettled = myAllSettled
+  const myAllSettled1 = (promises) => {
+    return new Promise((resolve) => {
+      let result = [];
+      let count = 0;
+      for(let i=0; i<promises.length; i++){
+          Promise.resolve(promises[i]).then(res => {
+              count++;
+              result[i] = { status: 'fulfilled', value: res };
+              if(count === promises.length){
+                  resolve(result);
+              }
+          }).catch(err => {
+            count++;
+            result[i] = { status: 'rejected', value: err };
+            if(count === promises.length){
+              resolve(result);
+            }
+          })
+      }
+  })
+  }
+
+Promise.myAllSettled = myAllSettled

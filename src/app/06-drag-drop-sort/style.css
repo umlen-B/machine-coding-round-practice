@@ -1,0 +1,38 @@
+/* App.css */
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  } */
+  
+  .DDSort {
+    margin: auto;
+    margin-top: 15vh;
+    width: 300px;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .list-item {
+    padding: 16px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: grey;
+    cursor: pointer;
+  }
+  
+  .list-item:hover {
+    background-color: lightgrey;
+  }
+  
+  .list-item:active {
+    background-color: #ccc;
+  }
+  

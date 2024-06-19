@@ -2,6 +2,51 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const pages = () => {
+    const links = [
+      {href:"/01-debounce",
+    title:"Debounce Search",
+  description:"Checkout debounce search with Nextjs and TypeScript"},
+
+  {href:"/02-throttle",
+  title:"Throttle Search",
+  description:"Checkout throttle search with Nextjs and TypeScript"},
+
+  {href:"/03-debounce-throttle",
+  title:"Debounce & Throttle",
+  description:"Checkout debounce and throttle with Nextjs and TypeScript"},
+  {href:"/04-to-do-list",
+    title:"To Do List",
+  description:"Checkout to do list with Nextjs and TypeScript"},
+  {href:"/05-drag-drop-upload",
+    title:"Drag Drop Upload",
+  description:"Checkout Drag Drop Upload with Nextjs and TypeScript"},
+  {href:"/06-drag-drop-sort",
+    title:"Drag Drop sorting",
+  description:"Checkout Drag Drop sorting with Nextjs and TypeScript"},
+  {href:"/07-file-explorer",
+    title:"File explorer",
+  description:"Checkout file explorer with Nextjs and TypeScript"},
+
+    ]
+    return links.map(link => <Link
+      key={link.href}
+      href={link.href}
+      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+      // target="_blank"
+      rel="noopener noreferrer"
+    >
+      <h2 className={`mb-3 text-2xl font-semibold`}>
+        {link.title}
+        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+          -&gt;
+        </span>
+      </h2>
+      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+      {link.description}
+      </p>
+    </Link>)
+  }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
@@ -17,70 +62,7 @@ export default function Home() {
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <Link
-          href="/01-debounce"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          // target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Debounce Search{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Checkout debounce search with Nextjs and TypeScript
-          </p>
-        </Link>
-        <Link
-          href="/02-tic-tac-toe"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          // target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-          Tic-tac-toe{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Tic tac toe with Nextjs and TypeScript
-          </p>
-        </Link>
-        <Link
-          href="/03-rating"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          // target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-          Star rating with slider{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-          Star rating with slider
-          </p>
-        </Link>
-        <Link
-          href="/04-to-do-list"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          // target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-          To-do-list{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-          To-do-list
-          </p>
-        </Link>
+        {pages()}
       </div>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
       </div>
