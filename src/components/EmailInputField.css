@@ -1,0 +1,46 @@
+/* EmailInputField.css */
+
+.email-input-container {
+    margin-bottom: 20px;
+  }
+  
+  .email-chip-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    min-height: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .email-chip {
+    display: flex;
+    align-items: center;
+    background-color: #e1f5fe;
+    padding: 5px;
+    border-radius: 16px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .email-chip button {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  input[type="text"] {
+    border: none;
+    outline: none;
+    flex: 1;
+    min-width: 100px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  
