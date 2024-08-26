@@ -78,7 +78,12 @@ const Suggestions = () => {
                 )
             )
             .map((item) => (
-              <button className="clickable" data-fruit={item} onClick={addItem}>
+              <button
+                key={item}
+                className="clickable"
+                data-fruit={item}
+                onClick={addItem}
+              >
                 {item}
               </button>
             ))}
