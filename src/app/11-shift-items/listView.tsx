@@ -14,12 +14,12 @@ type ListViewProps = {
 // Wrap in React.memo with compare function to check length of items
 function ListView(props: ListViewProps) {
   // function ListView(props) {
-  const addNewItem = (e) => {
+  const addNewItem = (e: any) => {
     if (e.key === "Enter") {
       props.addItem(e.target.value, props.type);
     }
   };
-  const updateChecked = (e) => {
+  const updateChecked = (e: any) => {
     props.onCheckChange(
       e.target.checked,
       e.target.getAttribute("id"),
@@ -39,7 +39,12 @@ function ListView(props: ListViewProps) {
     // add aria atrributes for span for better accessiblity
     return selectedCount && !isAllSelected ? (
       <div>
-        <span id={props.type} checked={true} onClick={props.updateAll}>
+        <span
+          id={props.type}
+          aria-checked={true}
+          role="checkbox"
+          onClick={props.updateAll}
+        >
           [-]
         </span>{" "}
         {selectedCount}/{props.items.length} Selected

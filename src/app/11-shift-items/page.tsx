@@ -77,8 +77,13 @@ export default function App() {
     setRightList(newRightList);
   };
   // Extract common logic to different function
-  const updateAll = (e) => {
-    const checked = e.target.checked;
+  const updateAll = (e: any) => {
+    let checked = false;
+    if (e.target.tagName === "INPUT" && e.target.type === "checkbox") {
+      checked = e.target.checked;
+    } else if (e.target.tagName === "SPAN") {
+      checked = true;
+    }
     const queue = e.target.getAttribute("id");
     if (queue === "left") {
       const arr = leftList.map((item) => {

@@ -28,19 +28,17 @@ const Suggestions = () => {
     "Avocado",
     "Coconut",
   ];
-  const handleSuggestions = (e) => {
+  const handleSuggestions = (e: any) => {
     setValue(e.target.value);
   };
   const debouncedHandle = useDebounce(handleSuggestions, 500);
-  const addItem = (e) => {
-    console.log(e);
+  const addItem = (e: any) => {
     setSelectedFruits((prev) => [e.target.getAttribute("data-fruit"), ...prev]);
     if (inputRef.current) {
       inputRef.current.focus();
     }
   };
-  const removeItem = (e) => {
-    console.log(e);
+  const removeItem = (e: any) => {
     setSelectedFruits((prev) =>
       prev.filter((item) => e.target.getAttribute("data-fruit") !== item)
     );

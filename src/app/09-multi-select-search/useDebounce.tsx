@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const useDebounce = (fn: (...args: any[]) => void, delay = 500) => {
   // const [timer, setTimer] = useState(null)
-  const timer = useRef<Timeout | null>(null);
+  const timer = useRef<any>(null);
   useEffect(() => {
     // Cleanup function to clear the timeout if the component is unmounted or dependencies change
     return () => {
@@ -11,13 +11,13 @@ const useDebounce = (fn: (...args: any[]) => void, delay = 500) => {
       }
     };
   }, [fn, delay]);
-  return function (...args) {
+  return function (...args: any[]) {
     if (timer) {
       clearTimeout(timer.current);
     }
     timer.current = setTimeout(() => {
-      fn.apply(this, args);
-      //   fn(...args);
+      // fn.apply(this, args);
+      fn(...args);
     }, delay);
   };
 };
