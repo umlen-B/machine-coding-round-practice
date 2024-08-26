@@ -47,6 +47,23 @@ export default function Home() {
         title: "Email Composer",
         description: "Checkout email composer with Nextjs and TypeScript",
       },
+      {
+        href: "/09-multi-select-search",
+        title: "Search with multi select",
+        description:
+          "Checkout Search with multi select in Nextjs and TypeScript",
+      },
+      {
+        href: "/10-interactive-ui",
+        title: "Dynamic box UI",
+        description: "Checkout dynamic box UI in Nextjs and TypeScript",
+      },
+      {
+        href: "/11-shift-items",
+        title: "Item shift",
+        description:
+          "Checkout item transfer between columns in Nextjs and TypeScript",
+      },
     ];
     return links.map((link) => (
       <Link

@@ -1,0 +1,34 @@
+.container{
+    width: 50%;
+    margin: auto;
+}
+.wrapper, .suggestionsList{
+    color: black;
+    background-color: white;
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.selection{
+    border-radius: 8px;
+    background-color: grey;
+    width: fit-content;
+    margin: 4px;
+    padding: 0 4px;
+}
+input{
+    padding: 0 4px;
+    min-width: 50%;
+    flex-grow: 1;
+}
+.suggestionsList{
+    display: block;
+}
+.clickable{
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+.clickable:hover, .clickable:focus{
+    background-color: grey;
+}

@@ -1,0 +1,39 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .wrapper {
+    width: max(fit-content,50%);
+    margin: auto;
+    background-color: white;
+    color: black;
+    display: flex;
+  }
+
+  .btn{
+    width: 100%;
+    margin: 4px;
+    padding: 4px;
+    text-align: center;
+    font-weight: bold;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 4px;
+  }
+
+  .wrapper > section {
+    flex-grow: 1;
+    padding: 8px;
+    border: 2px solid green;
+  }
+  
+
+  .addItem{
+    border: 1px solid grey;
+    padding: 4px;
+    margin-bottom: 8px;
+  }
+
+  input[type='checkbox']{
+    margin-right: 4px;
+  }
