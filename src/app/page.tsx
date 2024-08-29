@@ -11,16 +11,16 @@ export default function Home() {
       },
 
       {
-        href: "/02-throttle",
-        title: "Throttle Search",
-        description: "Checkout throttle search with Nextjs and TypeScript",
+        href: "/02-tic-tac-toe",
+        title: "Tic Tac Toe",
+        description: "Checkout tic tac toe with Nextjs and TypeScript",
       },
 
       {
-        href: "/03-debounce-throttle",
-        title: "Debounce & Throttle",
+        href: "/03-rating",
+        title: "Star rating",
         description:
-          "Checkout debounce and throttle with Nextjs and TypeScript",
+          "Checkout star rating with Nextjs and TypeScript",
       },
       {
         href: "/04-to-do-list",
